@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio(edit)</title>
+
+<!-- CSS only bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!-- Icon Font Awesome-->
+<script src="https://kit.fontawesome.com/4f970e8fce.js" crossorigin="anonymous"></script>
+
+<!--Vinculo con CSS-->
+<link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+
+</head>
+
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/FrontEnd/ASSETS/IMG/Logo ArgProgram1.png" alt="" width="200" height="">
+        </a>
+        <!--Redes Sociales-->
+        <ul class="social-icons">
+             <li><a href="" class="social-icon" type="button" data-bs-toggle="modal" data-bs-target="#socialesModal"><span style="color: rgb(255, 255, 255);"><i class="fa-solid fa-square-pen fa-2xl"></span></i></a></li>
+
+             <!--Button logout-->
+             <li><a href="" class="social-icon" type="button" data-bs-toggle="modal" data-bs-target="#usuarioModal"><span style="color: rgb(255, 255, 255);" ><i class="fa-solid fa-right-from-bracket fa-2xl"></i></span></a></li>
+        </ul> 
+    </div>  
+</nav>
+
+
+<!--Modales para edicion de contenido-->
+
+
+<!--Modal Usuario-->
+<div class="modal fade" id="usuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="usuarioModal">Salir de la Edicion?</h1>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-danger">Salir</button>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+
+<!--Modal Redes Sociales-->
+<div class="modal fade" id="socialesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="socialesModal">Redes Sociales</h1>
+          <div id="emailHelp" class="form-text">Selecciona la Red social</div>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleInputEmail1" class="form-label text-white">Correo Electronico</label>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                  </div>
+              </form>   
+              <form>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleInputEmail1" class="form-label text-white">GitHub</label>
+                  </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="https://github.com/name">
+                </div>
+              </form> 
+              <form>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleInputEmail1" class="form-label text-white">Facebook</label>
+                  </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre de usuario">
+                </div>
+              </form> 
+              <form>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleInputEmail1" class="form-label text-white">LinkedIn</label>
+                  </div>
+                <div class="mb-3">
+                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre de usuario">
+                </div>
+              </form> 
+              <form>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleInputEmail1" class="form-label text-white">Instagram</label>
+                  </div>
+                <div class="mb-3">
+                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="@nombre de usuario">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--Modal Banner borrar-->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteModal">Eliminar Banner</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Banner-->
+<div class="modal fade" id="bannerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="bannerModal">Inserta Imagen</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen para el banner</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--Modal Perfil-->
+<div class="modal fade" id="perfilModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="perfilModal">Perfil</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">insertar imagen de perfil</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo destacado/Area Profesional</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Stack Developer Jr">
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Perfil-->
+<div class="modal fade" id="sobremiModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="sobremiModal">Datos Personales</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre y apellido">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Informaion profesional resumida" ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!--Modal Experiencia plus-->
+<div class="modal fade" id="experienciaplusModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="experienciaplus1Modal">Experiencia</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Puesto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrollador">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion de Tareas</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia1-->
+<div class="modal fade" id="experiencia1Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="experiencia1Modal">Experiencia</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Puesto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrollador">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion de Tareas</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia1 borrar-->
+<div class="modal fade" id="deleteexperiencia1Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteperfilModal">Eliminar Experiencia</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia2-->
+<div class="modal fade" id="experiencia2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="experiencia2Modal">Experiencia2</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Puesto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrollador">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion de Tareas</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia2 borrar-->
+<div class="modal fade" id="deleteexperiencia2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteexperiencia2Modal">Eliminar Experiencia2</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia2-->
+<div class="modal fade" id="experiencia3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="experiencia3Modal">Experiencia3</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Puesto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrollador">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion de Tareas</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia3 borrar-->
+<div class="modal fade" id="deleteexperiencia3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteexperiencia3Modal">Eliminar Experiencia3</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia3-->
+<div class="modal fade" id="experiencia4Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="experiencia4Modal">Experiencia4</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Puesto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrollador">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripcion de Tareas</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="..." ></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Experiencia4 borrar-->
+<div class="modal fade" id="deleteexperiencia4Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteexperiencia4Modal">Eliminar Experiencia4</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!--Modal Educacion1-->
+<div class="modal fade" id="educacionplusModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educacionplusModal">Estudios</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo obtenido</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrolador web Full Stack">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Institucion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Argentina Programa">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion1-->
+<div class="modal fade" id="educacion1Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educacion1Modal">Estudios1</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo obtenido</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrolador web Full Stack">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Institucion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Argentina Programa">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion1 borrar-->
+<div class="modal fade" id="deleteeducacion1Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteeducacion1Modal">Eliminar Estudios1</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion2-->
+<div class="modal fade" id="educacion2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educacion2Modal">Estudios2</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo obtenido</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrolador web Full Stack">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Institucion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Argentina Programa">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion2 borrar-->
+<div class="modal fade" id="deleteeducacion2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteeducacion2Modal">Eliminar Estudios2</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion3-->
+<div class="modal fade" id="educacion3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educacion3Modal">Estudios3</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo obtenido</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Desarrolador web Full Stack">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Institucion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Argentina Programa">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Periodo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000 - 00/00/0000">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Educacion2 borrar-->
+<div class="modal fade" id="deleteeducacion3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteeducacion3Modal">Eliminar Estudios3</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!--Modal Habilidades Plus-->
+<div class="modal fade" id="skillplusModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="skillplusModal">Habilidad</h1>
+        </div>
+        <div class="modal-body">
+            <label for="exampleFormControlInput1" class="form-label">Selecciona el tipo de habilidad</label>
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input bg-info" id="exampleCheck1">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Dura/Hard Skill</label>
+                <input type="checkbox" class="form-check-input bg-warning" id="exampleCheck1">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Blanda/Soft Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: hardskills-->
+<div class="modal fade" id="hardskillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="hardskillModal">Habilidad</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Dura/Hard Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Conocimiento tecnico">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete hardkills-->
+<div class="modal fade" id="deletehardskillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletehardskillModal">Eliminar Habilidad</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: softskills-->
+<div class="modal fade" id="softskillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="softkillModal">Habilidad</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Blanda/Soft Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Creatividad">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete softskills-->
+<div class="modal fade" id="deletesoftskillModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletesoftkillModal">Eliminar Habilidad</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: hardskills2-->
+<div class="modal fade" id="hardskill2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="hardskill2Modal">Habilidad2</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Dura/Hard Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Conocimiento tecnico">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete hardkills2-->
+<div class="modal fade" id="deletehardskill2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletehardskill2Modal">Eliminar Habilidad2</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: softskills2-->
+<div class="modal fade" id="softskill2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="softkill2Modal">Habilidad2</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Blanda/Soft Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Creatividad">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete softskills2-->
+<div class="modal fade" id="deletesoftskill2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletesoftkill2Modal">Eliminar Habilidad2</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: hardskills3-->
+<div class="modal fade" id="hardskill3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="hardskill3Modal">Habilidad3</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Dura/Hard Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Conocimiento tecnico">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete hardkills3-->
+<div class="modal fade" id="deletehardskill3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletehardskill3Modal">Eliminar Habilidad3</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Habilidades: softskills3-->
+<div class="modal fade" id="softskill3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="softkill3Modal">Habilidad3</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Habilidad Blanda/Soft Skill</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Creatividad">
+            </div>
+            <div class="mb-3">
+                <label for="customRange3" class="form-label">Rango</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal habilidades: delete softskills3-->
+<div class="modal fade" id="deletesoftskill3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deletesoftkill3Modal">Eliminar Habilidad3</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!--Modal Proyecto Plus-->
+<div class="modal fade" id="proyectoplusModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="proyectoplusModal">Proyecto</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Proyecto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Portafolio">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Fecha de elaboracion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Link o enlace de proyecyo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto-->
+<div class="modal fade" id="proyectoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="proyectoModal">Proyecto</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Proyecto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Portafolio">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Fecha de elaboracion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Link o enlace de proyecyo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto borrar-->
+<div class="modal fade" id="deleteproyectoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteproyectoModal">Eliminar Proyecto</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto2-->
+<div class="modal fade" id="proyecto2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="proyecto2Modal">Proyecto2</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Proyecto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Portafolio">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Fecha de elaboracion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Link o enlace de proyecyo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto2 borrar-->
+<div class="modal fade" id="deleteproyecto2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteproyecto2Modal">Eliminar Proyecto2</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto3-->
+<div class="modal fade" id="proyecto3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="proyecto3Modal">Proyecto3</h1>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Insertar imagen de referencia</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Titulo del Proyecto</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Portafolio">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Fecha de elaboracion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00/00/0000">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Link o enlace de proyecyo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Modal Proyecto3 borrar-->
+<div class="modal fade" id="deleteproyecto3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteproyecto3Modal">Eliminar Proyecto3</h1>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<body>
+<!--Banner-->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <img src="ASSETS/IMG/Banner Gif 2.gif" class="d-block w-100" alt="Desarrollador Web">
+    <a  mhref="" class="banner-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa-solid fa-square-xmark fa-2xl banner-icon-delete"></i>
+    <a  mhref="" class="banner-icon" type="button" data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa-solid fa-square-pen fa-2xl banner-icon"></i></a>
+</div>
+
+<!--Seccion Sobre mi-->
+<section id="Sobre-mi" class="about">
+    <div class="p-3 mb-2 text-white">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-4 mt-5 mb-5">
+                <img src="assets/IMG/Foto de perfil.jpg"  class="rounded-circle w-75" alt="..." title="...">
+                <h4>Full Stack Developer Jr</h4>
+                <a  mhref="" class="perfil-imagen-icon" type="button" data-bs-toggle="modal" data-bs-target="#perfilModal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+            <div class="col-8 mt-5 mb-5">
+                <h1> Willian Torres </h1>                 
+                <p> "Informacion Personal Resumida" Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis maxime aspernatur sint omnis maiores ipsum explicabo! Tenetur adipisci nulla accusamus architecto voluptatibus odit esse qui blanditiis, libero corrupti repellat dolor.</p>
+                <a  mhref="" class="perfil-icon" type="button" data-bs-toggle="modal" data-bs-target="#sobremiModal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+        </div>
+    </div> 
+    </div>
+</section>
+ 
+<!--Experiencia-->
+<h2 clas="title-experiencia">Experiencia
+    <a  mhref="" class="" type="button" data-bs-toggle="modal" data-bs-target="#experienciaplusModal"><i class="fa-solid fa-square-plus fa-md plus-icon"></i></a>
+</h2>
+<hr>
+<!-- Cards-->
+<section id="Experiencia" class="about">
+    <div class="container text-center">
+        <div class="row justify">
+
+            <div class="col-md-auto">
+                <div class="card" style="width: 18rem;">
+                 <img src="ASSETS/IMG/Banner Gif 2.gif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Titulo del Pesto</h5>
+                  <p class="card-text">Periodo</p>
+                  <p class="card-text"><small>"descripcion y tareas del puesto"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut dolor reprehenderit itaque nemo animi quibusdam maiores recusandae doloribus harum laborum modi temporibus error iste officiis. Odio, rerum ipsam! Reiciendis.</small></p>
+                  <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteexperiencia1Modal"><i class="fa-solid fa-square-xmark fa-2xl tarjeta-icon-delete"></i>
+                  <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#experiencia1Modal"><i class="fa-solid fa-square-pen fa-2xl tarjeta-icon"></i></a>
+                </div>
+            </div>
+            </div>
+
+          <div class="col-md-auto">
+            <div class="card" style="width: 18rem;">
+                <img src="ASSETS/IMG/Banner Gif 2.gif" class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Titulo del Pesto</h5>
+                 <p class="card-text">Periodo</p>
+                 <p class="card-text"><small>"descripcion y tareas del puesto" Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut dolor reprehenderit itaque nemo animi quibusdam maiores recusandae doloribus harum laborum modi temporibus error iste officiis. Odio, rerum ipsam! Reiciendis.</small></p>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteexperiencia2Modal"><i class="fa-solid fa-square-xmark fa-2xl tarjeta-icon-delete"></i>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#experiencia2Modal"><i class="fa-solid fa-square-pen fa-2xl tarjeta-icon"></i></a>
+                </div>
+           </div>
+          </div>
+
+          <div class="col-md-auto">
+            <div class="card" style="width: 18rem;">
+                <img src="ASSETS/IMG/Banner Gif 2.gif" class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Titulo del Pesto</h5>
+                 <p class="card-text">Periodo</p>
+                 <p class="card-text"><small>"descripcion y tareas del puesto"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut dolor reprehenderit itaque nemo animi quibusdam maiores recusandae doloribus harum laborum modi temporibus error iste officiis. Odio, rerum ipsam! Reiciendis.</small></p>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteexperiencia3Modal"><i class="fa-solid fa-square-xmark fa-2xl tarjeta-icon-delete"></i>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#experiencia3Modal"><i class="fa-solid fa-square-pen fa-2xl tarjeta-icon"></i></a>
+                </div>
+           </div>
+          </div>
+
+          <div class="col-md-auto">
+            <div class="card" style="width: 18rem;">
+                <img src="ASSETS/IMG/Banner Gif 2.gif" class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">Titulo del Pesto</h5>
+                 <p class="card-text">Periodo</p>
+                 <p class="card-text"><small>"descripcion y tareas del puesto"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut dolor reprehenderit itaque nemo animi quibusdam maiores recusandae doloribus harum laborum modi temporibus error iste officiis. Odio, rerum ipsam! Reiciendis.</small></p>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteexperiencia4Modal"><i class="fa-solid fa-square-xmark fa-2xl tarjeta-icon-delete"></i>
+                 <a  mhref="" class="tarjeta-icon" type="button" data-bs-toggle="modal" data-bs-target="#experiencia4Modal"><i class="fa-solid fa-square-pen fa-2xl tarjeta-icon"></i></a>
+                </div>
+           </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!--Educacion-->
+<h2 clas="title-experiencia">Educacion
+    <a  mhref="" class="" type="button" data-bs-toggle="modal" data-bs-target="#educacionplusModal"><i class="fa-solid fa-square-plus fa-md plus-icon"></i></a>
+</h2>
+<hr>
+<section id="Educacion" class="about">
+    <div class="p-3 mb-2 text-dark">
+        <div class="container text-white d-grid gap-3">
+            <div class="text-end">    
+                <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteeducacion1Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+                <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#educacion1Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+            <div class="row p-2 bg-dark rounded">
+                <div class="col-4">
+                    <img src="assets/IMG/-gray-background-pure-color.jpg"  class="rounded w-50" alt="..." title="...">    
+                </div>
+                <div class="col-8">
+                    <h3>Titulo optenido</h3>
+                    <h5>Institucion</h5>
+                    <p>Periodo</p>
+                </div>
+            </div>   
+            <div class="text-end">    
+                <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteeducacion2Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+                <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#educacion2Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+            <div class="row p-2 bg-dark rounded">
+                <div class="col-4 ">
+                    <img src="assets/IMG/-gray-background-pure-color.jpg"  class="rounded w-50" alt="..." title="...">    
+                </div>
+                <div class="col-8 ">
+                    <h3>Titulo optenido</h3>
+                    <h5>Institucion</h5>
+                    <p>Periodo</p>
+                </div>
+            </div>
+           <div class="text-end">    
+            <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteeducacion3Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+            <a  mhref="" class="educacion-icon" type="button" data-bs-toggle="modal" data-bs-target="#educacion3Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+           </div>
+            <div class="row p-2 bg-dark rounded">
+                <div class="col-4">
+                    <img src="ASSETS/IMG/-gray-background-pure-color.jpg"  class="rounded w-50" alt="..." title="...">    
+                </div>
+                <div class="col-8">
+                    <h3>Titulo optenido</h3>
+                    <h5>Institucion</h5>
+                    <p>Periodo</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<!--Habilidades-->
+<h2 clas="title-experiencia">Habilidades
+    <a  mhref="" class="" type="button" data-bs-toggle="modal" data-bs-target="#skillplusModal"><i class="fa-solid fa-square-plus fa-md plus-icon"></i></a>
+</h2>
+<hr>
+<section id="Habilidades" class="habilidades">
+<div class="container-center text-white">
+    <div class="row mt-2 mb-5">
+      <div class="col">
+        <div class="text-end">    
+            <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletehardskillModal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+            <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#hardskillModal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+        </div>
+        <h5>FrontEnd</h5>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="text-end">    
+            <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletesoftskillModal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+            <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#softskillModal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+        </div>
+        <h5>Creatividad</h5>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-label="Warning striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row mt-2 mb-5">
+        <div class="col">
+          <div class="text-end">    
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletehardskill2Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#hardskill2Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+          </div>
+          <h5>FrontEnd</h5>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="text-end">    
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletesoftskill2Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#softskill2Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+          </div>
+          <h5>Creatividad</h5>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-label="Warning striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row mt-2 mb-5">
+        <div class="col">
+          <div class="text-end">    
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletehardskill3Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#hardskill3Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+          </div>
+          <h5>FrontEnd</h5>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="text-end">    
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#deletesoftskill3Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+              <a  mhref="" class="skill-icon" type="button" data-bs-toggle="modal" data-bs-target="#softskill3Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+          </div>
+          <h5>Creatividad</h5>
+          <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-label="Warning striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+      </div>
+
+</div>
+</section>
+
+<!--Proyectos-->
+<h2 clas="title-experiencia">Proyectos
+    <a  mhref="" class="" type="button" data-bs-toggle="modal" data-bs-target="#proyectoplusModal"><i class="fa-solid fa-square-plus fa-md plus-icon"></i></a>
+</h2>  
+<hr>
+<section id="Proyectos" class="proyectos">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="">
+        <img src="ASSETS/IMG/-gray-background-pure-color.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">            
+          <h5>Portafolio</h5>
+          <hr class="portafolio">
+          <p>15 de enero de 2023</p>
+          <h6>Link o enlace de proyecyo</h6>
+          <div class="text-end">    
+            <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteproyectoModal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+            <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#proyectoModal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+        </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item" data-bs-interval="">
+        <img src="ASSETS/IMG/-gray-background-pure-color.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Proximamente</h5>
+            <hr class="portafolio">
+            <p>15 de enero de 2023</p>
+            <h6>Link o enlace de proyecyo</h6>
+            <div class="text-end">    
+                <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteproyecto2Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+                <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#proyecto2Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <img src="ASSETS/IMG/-gray-background-pure-color.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Proximamente</h5>
+            <hr class="portafolio">
+            <p>15 de enero de 2023</p>
+            <h6>Link o enlace de proyecyo</h6>
+            <div class="text-end">    
+                <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#deleteproyecto3Modal"><i class="fa-solid fa-square-xmark fa-2xl icon-delete"></i>
+                <a  mhref="" class="proyecto-icon" type="button" data-bs-toggle="modal" data-bs-target="#proyecto3Modal"><i class="fa-solid fa-square-pen fa-2xl edit-icon"></i></a>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+
+
+  <!-- JavaScript Bundle with Popper bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

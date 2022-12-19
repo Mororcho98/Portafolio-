@@ -1,0 +1,146 @@
+dl, ol, ul{
+    margin-top: 1%;
+}
+.social-icons li {
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    vertical-align:bottom;
+    display: inline;
+    font-size: 100%;
+    padding: 0.50em;
+    background-color:transparent;
+  }
+  i.fa-solid.fa-envelope.fa-2xl:hover{
+    color: rgb(255, 200, 2);
+  }
+  i.fa-brands.fa-square-github.fa-2xl:hover{
+    color: rgb(165, 13, 196);
+  } 
+  i.fa-brands.fa-square-facebook.fa-2xl:hover{
+    color: blue;
+  }
+  i.fa-brands.fa-linkedin.fa-2xl:hover{
+    color: rgb(0, 145, 255);
+  }
+  i.fa-solid.fa-right-to-bracket.fa-2xl:hover{
+    color: rgb(24, 202, 8);
+  }
+  i.fa-brands.fa-square-instagram.fa-2xl:hover{
+    color: rgb(228, 19, 134);
+  }
+
+  .modal-content{
+    background-color: black;
+    padding: 1rem;
+  }
+  .fs-5{
+    color: aliceblue;
+  }
+  .form-label{
+    color: rgba(240, 248, 255, 0.763);
+  }
+  .p-3{
+    background-color: rgb(0, 0, 0);
+  }
+  .rounded-circle{
+    margin-bottom: 0.7rem;
+  }
+  body{
+    background-color: rgb(0, 0, 0);
+  }
+  .card{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .h2, h2{
+    margin-top: 5rem;
+    margin-left: 5rem;
+    color: rgb(246, 246, 246);
+  }
+
+  hr{
+    color: aqua;
+  }
+  .carousel-item{
+    height: 500px;
+  }
+  section.about{
+    background-color: rgb(2, 171, 168);
+  }
+  section.habilidades{
+    background-color: rgb(126, 132, 132);
+    padding: 2rem;
+  }
+  
+  /*DASHBOARD*/
+  i.fa-solid.fa-right-from-bracket.fa-2xl:hover{
+    color: rgb(202, 8, 8);
+  }
+  i.fa-solid.fa-square-pen.fa-2xl:hover{
+    color: rgb(224, 200, 19);
+  }
+
+
+
+
+i.fa-solid.fa-square-pen.fa-2xl.banner-icon{
+    color: rgb(255, 255, 255);
+    padding:0.50rem;
+    padding-top: 2rem;
+  }
+  i.fa-solid.fa-square-pen.fa-2xl.banner-icon:hover{
+    color: rgb(224, 200, 19);
+  }
+  i.fa-solid.fa-square-xmark.fa-2xl.banner-icon-delete{
+    color:rgb(253, 253, 253);
+    padding: 0.50rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  i.fa-solid.fa-square-xmark.fa-2xl.banner-icon-delete:hover{
+    color:rgb(202, 8, 8); 
+  } 
+
+
+
+
+   i.fa-solid.fa-square-pen.fa-2xl.edit-icon{
+    color: rgb(255, 255, 255);
+    padding: 0.50rem;
+  }
+  i.fa-solid.fa-square-pen.fa-2xl.edit-icon:hover{
+    color: rgb(224, 200, 19);
+  }
+  i.fa-solid.fa-square-xmark.fa-2xl.icon-delete{
+    color: rgb(255, 255, 255);
+    padding: 0.50rem;
+  }
+  i.fa-solid.fa-square-xmark.fa-2xl.icon-delete:hover{
+    color: rgb(202, 8, 8);
+  }
+
+  i.fa-solid.fa-square-xmark.fa-2xl.tarjeta-icon-delete{
+    color: rgb(0, 0, 0);
+    padding: 0.50rem;
+  }
+  i.fa-solid.fa-square-xmark.fa-2xl.tarjeta-icon-delete:hover{
+    color: rgb(202, 8, 8);
+    padding: 0.50rem;
+  }
+
+  i.fa-solid.fa-square-pen.fa-2xl.tarjeta-icon{
+    color: rgb(0, 0, 0);
+  }
+  i.fa-solid.fa-square-pen.fa-2xl.tarjeta-icon:hover{
+    color: rgb(224, 200, 19);
+  }
+ 
+  i.fa-solid.fa-square-plus.fa-md.plus-icon{
+    color: rgb(255, 255, 255);
+  }
+  i.fa-solid.fa-square-plus.fa-md.plus-icon:hover{
+    color: rgb(37, 202, 8);
+  }
+
